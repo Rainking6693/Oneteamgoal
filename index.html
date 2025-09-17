@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Team Goal - Team Fundraising Made Easy</title>
+  <meta name="description" content="Raise money for your team with custom gear and donations. No upfront costs, no inventory. Get paid in 1-2 days!" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #ffffff;
+      color: #1a365d;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+      padding: 20px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .logo {
+      height: 90px;
+      object-fit: contain;
+    }
+    
+    .victory-fingers {
+      height: 180px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #b91c1c 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    }
+    
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 25px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      line-height: 1.1;
+    }
+    
+    .hero .subtitle {
+      font-size: 1.4rem;
+      margin-bottom: 35px;
+      font-weight: 400;
+      opacity: 0.95;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 18px 40px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .cta-primary {
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(185, 28, 28, 0.3);
+    }
+    
+    .cta-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(185, 28, 28, 0.4);
+    }
+    
+    .cta-secondary {
+      background: white;
+      color: #1a365d;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cta-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .video-section {
+      background: #f7fafc;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    
+    .video-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .video-section h2 {
+      color: #1a365d;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .video-section p {
+      color: #4a5568;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+    
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .steps {
+      background: white;
+      padding: 80px 20px;
+    }
+    
+    .steps h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #1a365d;
+      margin-bottom: 60px;
+      font-weight: 700;
+    }
+    
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .step {
+      text-align: center;
+      padding: 40px 30px;
+      background: #f7fafc;
+      border-radius: 12px;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+    
+    .step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .step-number {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0 auto 20px;
+    }
+    
+    .step h3 {
+      color: #1a365d;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    .step p {
+      color: #4a5568;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    
+    .gear-section {
+      background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .gear-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpolygon points='10 0 20 10 10 20 0 10'/%3E%3C/g%3E%3C/svg%3E") repeat;
+    }
+    
+    .gear-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .gear-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .gear-section .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+      opacity: 0.9;
+    }
+    
+    .gear-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .gear-item {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .gear-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    .gear-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+    
+    .gear-item img:hover {
+      opacity: 0.8;
+    }
+    
+    .gear-item-name {
+      padding: 15px;
+      color: #1a365d;
+      font-weight: 600;
+      text-align: center;
+      background: white;
+    }
+    
+    .testimonial {
+      background: #f7fafc;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    .testimonial-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .testimonial blockquote {
+      font-size: 1.5rem;
+      color: #2d3748;
+      font-style: italic;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .testimonial-author {
+      color: #718096;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    
+    .final-cta {
+      background: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    
+    .final-cta h2 {
+      color: #1a365d;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .final-cta p {
+      color: #4a5568;
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+    }
+    
+    .footer {
+      background: #1a365d;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+    
+    .footer a {
+      color: #90cdf4;
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .hero .subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cta-button {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .header-container {
+        padding: 10px 20px;
+      }
+      
+      .logo {
+        height: 65px;
+      }
+      
+      .victory-fingers {
+        height: 120px;
+      }
+    }
+    
+    /* Modal styles for image scaling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 50px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      animation: zoom 0.3s;
+    }
+    
+    @keyframes zoom {
+      from {transform: scale(0.1)}
+      to {transform: scale(1)}
+    }
+    
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+    }
+    
+    .modal-caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="ALogo.jpg" alt="One Team Goal Logo" class="logo">
+      <img src="Fingers.png" alt="Victory Fingers" class="victory-fingers">
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Raise Money for Your Team in Days — Not Weeks</h1>
+      <p class="subtitle">Sell custom gear. Accept donations. No upfront costs, no shipping, no inventory. Just cash in your account in 1–2 days.</p>
+      <div class="cta-buttons">
+        <a href="final_signup_form_page.html" class="cta-button cta-primary">Launch My Free Team Store</a>
+        <a href="#video" class="cta-button cta-secondary">Watch 60-Second Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section" id="video">
+    <div class="video-container">
+      <h2>See How It Works in 60 Seconds</h2>
+      <p>Discover how easy fundraising can be with One Team Goal</p>
+      <div class="video-wrapper">
+        <video controls poster="Homepage.jpg">
+          <source src="One team goal walk through video Subtitles.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps">
+    <h2>How It Works</h2>
+    <div class="step-grid">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>We Build Your Shop</h3>
+        <p>Get pro-quality team gear with your logo — ready to sell online in minutes.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Share the Link</h3>
+        <p>Your team gets a QR code and shareable link. Just post it and watch the support roll in!</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Get Paid Fast</h3>
+        <p>Donations and gear sales hit your account in as little as 1–2 days. No waiting, no hassle.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gear-section">
+    <div class="gear-content">
+      <h2>Your Team. Your Brand. Real Gear.</h2>
+      <p class="subtitle">Premium quality merchandise your supporters will love to wear</p>
+      <div class="gear-gallery">
+        <div class="gear-item">
+          <img src="Alpha Predator Hat.png" alt="Alpha Predator Hat" class="clickable-img">
+          <div class="gear-item-name">Alpha Predator Hat</div>
+        </div>
+        <div class="gear-item">
+          <img src="Alpha Predator Shirt.png" alt="Alpha Predator Shirt" class="clickable-img">
+          <div class="gear-item-name">Alpha Predator Shirt</div>
+        </div>
+        <div class="gear-item">
+          <img src="Alpha Predator Hoodie.png" alt="Alpha Predator Hoodie" class="clickable-img">
+          <div class="gear-item-name">Alpha Predator Hoodie</div>
+        </div>
+        <div class="gear-item">
+          <img src="Grizzly Claw Collection.png" alt="Grizzly Claw Collection" class="clickable-img">
+          <div class="gear-item-name">Grizzly Claw Collection</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <div class="testimonial-content">
+      <blockquote>
+        "We raised $2,500 in one week with no inventory, no volunteers, and no stress. One Team Goal made it too easy."
+      </blockquote>
+      <p class="testimonial-author">— Coach Mike, Utah</p>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <h2>Ready to Fund Your Team?</h2>
+    <p>Join thousands of teams raising money the easy way</p>
+    <div class="cta-buttons">
+      <a href="final_signup_form_page.html" class="cta-button cta-primary">Get Started Free</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 One Team Goal. All rights reserved.</p>
+    <p>Contact: <a href="mailto:info@oneteamgoal.com">info@oneteamgoal.com</a></p>
+  </footer>
+
+  <!-- The Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div id="caption" class="modal-caption"></div>
+  </div>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImg");
+    var captionText = document.getElementById("caption");
+
+    // Get all clickable images
+    var clickableImages = document.getElementsByClassName("clickable-img");
+
+    // Add click event to all clickable images
+    for (var i = 0; i < clickableImages.length; i++) {
+      clickableImages[i].onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
