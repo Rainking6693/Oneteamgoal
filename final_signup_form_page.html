@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Launch Your Free Team Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #001f4d;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #001f4d;
+    }
+    input, textarea {
+      padding: 12px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #00aaff;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #008ecc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Launch Your Free Team Store</h1>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="coach-name">Coach Name</label>
+      <input type="text" id="coach-name" name="coach-name" required />
+
+      <label for="team-name">Team Name</label>
+      <input type="text" id="team-name" name="team-name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="sport">Sport</label>
+      <input type="text" id="sport" name="sport" />
+
+      <label for="message">Anything else we should know?</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit & Request Store Setup</button>
+    </form>
+  </div>
+</body>
+</html>
