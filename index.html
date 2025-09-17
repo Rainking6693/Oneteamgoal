@@ -49,20 +49,9 @@
       right: -20px;
       top: -30px;
       transform: rotate(-15deg);
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
-      mix-blend-mode: multiply;
-      background: transparent;
-    }
-    
-    .victory-fingers::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(ellipse at center, transparent 30%, rgba(255,255,255,0) 70%);
-      pointer-events: none;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2)) contrast(1.2) saturate(1.1);
+      mix-blend-mode: screen;
+      opacity: 0.9;
     }
     
     .hero {
@@ -244,16 +233,7 @@
     .step-number:hover {
       transform: scale(1.1);
       box-shadow: 0 4px 15px rgba(185, 28, 28, 0.4);
-    }
-    
-    .step-number.clicked {
-      animation: stepPop 0.6s ease;
-    }
-    
-    @keyframes stepPop {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.4); }
-      100% { transform: scale(1); }
+      opacity: 0.8;
     }
     
     .step-icon {
@@ -578,6 +558,22 @@
       height: 150px;
       font-size: 1.2rem;
     }
+    
+    .modal-step-number {
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8rem;
+      font-weight: 700;
+      margin: auto;
+      box-shadow: 0 20px 40px rgba(185, 28, 28, 0.4);
+      animation: zoom 0.3s;
+    }
   </style>
 </head>
 <body>
@@ -616,7 +612,7 @@
     <h2>How It Works</h2>
     <div class="step-grid">
       <div class="step">
-        <div class="step-number clickable-step">1</div>
+        <div class="step-number clickable-step" data-step="1" data-title="We Build Your Shop">1</div>
         <div class="step-icon">
           <img src="Wolf.png" alt="Wolf">
         </div>
@@ -624,7 +620,7 @@
         <p>Get pro-quality team gear with your logo — ready to sell online in minutes.</p>
       </div>
       <div class="step">
-        <div class="step-number clickable-step">2</div>
+        <div class="step-number clickable-step" data-step="2" data-title="Share the Link">2</div>
         <div class="step-icon">
           <div class="qr-code"></div>
         </div>
@@ -632,7 +628,7 @@
         <p>Your team gets a QR code and shareable link. Just post it and watch the support roll in!</p>
       </div>
       <div class="step">
-        <div class="step-number clickable-step">3</div>
+        <div class="step-number clickable-step" data-step="3" data-title="Get Paid Fast">3</div>
         <div class="step-icon">
           <div class="money-symbol">$</div>
         </div>
@@ -745,8 +741,42 @@
     for (var i = 0; i < clickableImages.length; i++) {
       clickableImages[i].onclick = function() {
         modal.style.display = "block";
+        modalImg.style.display = "block";
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
+        
+        // Remove any existing step modal
+        var existingStepModal = document.getElementById("modalStepNumber");
+        if (existingStepModal) {
+          existingStepModal.remove();
+        }
+      }
+    }
+
+    // Add click event to step numbers
+    var stepNumbers = document.getElementsByClassName("clickable-step");
+    for (var i = 0; i < stepNumbers.length; i++) {
+      stepNumbers[i].onclick = function() {
+        modal.style.display = "block";
+        
+        // Create a large step number element instead of using modalImg
+        modalImg.style.display = "none";
+        
+        // Create or update the step number display
+        var existingStepModal = document.getElementById("modalStepNumber");
+        if (existingStepModal) {
+          existingStepModal.remove();
+        }
+        
+        var stepModal = document.createElement("div");
+        stepModal.id = "modalStepNumber";
+        stepModal.className = "modal-step-number";
+        stepModal.innerHTML = this.getAttribute("data-step");
+        
+        // Insert after the modal image
+        modalImg.parentNode.insertBefore(stepModal, modalImg.nextSibling);
+        
+        captionText.innerHTML = this.getAttribute("data-title");
       }
     }
 
@@ -755,34 +785,23 @@
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-      modal.style.display = "none";
+      closeModal();
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
       if (event.target == modal) {
-        modal.style.display = "none";
+        closeModal();
       }
     }
 
-    // Add click functionality to step numbers
-    var stepNumbers = document.getElementsByClassName("step-number");
-    
-    for (var i = 0; i < stepNumbers.length; i++) {
-      stepNumbers[i].onclick = function() {
-        // Remove clicked class from all step numbers
-        for (var j = 0; j < stepNumbers.length; j++) {
-          stepNumbers[j].classList.remove("clicked");
-        }
-        
-        // Add clicked class to the clicked step number
-        this.classList.add("clicked");
-        
-        // Remove the class after animation completes
-        var self = this;
-        setTimeout(function() {
-          self.classList.remove("clicked");
-        }, 600);
+    // Function to close modal and clean up
+    function closeModal() {
+      modal.style.display = "none";
+      modalImg.style.display = "block";
+      var existingStepModal = document.getElementById("modalStepNumber");
+      if (existingStepModal) {
+        existingStepModal.remove();
       }
     }
   </script>
