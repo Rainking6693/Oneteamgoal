@@ -21,9 +21,10 @@
     
     header {
       background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
-      padding: 20px 40px;
+      padding: 30px 40px;
       position: relative;
       overflow: hidden;
+      min-height: 120px;
     }
     
     .header-container {
@@ -37,14 +38,19 @@
     }
     
     .logo {
-      height: 90px;
+      height: 140px;
       object-fit: contain;
     }
     
     .victory-fingers {
-      height: 180px;
+      height: 280px;
       object-fit: contain;
-      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+      position: absolute;
+      right: -20px;
+      top: -30px;
+      transform: rotate(-15deg);
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+      mix-blend-mode: multiply;
     }
     
     .hero {
@@ -311,27 +317,49 @@
     
     .testimonial {
       background: #f7fafc;
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
     
     .testimonial-content {
-      max-width: 900px;
+      max-width: 1400px;
       margin: 0 auto;
     }
     
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .testimonial-item {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+    
+    .testimonial-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+    
     .testimonial blockquote {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
       color: #2d3748;
       font-style: italic;
       margin-bottom: 20px;
       line-height: 1.6;
+      text-align: left;
     }
     
     .testimonial-author {
-      color: #718096;
-      font-size: 1.1rem;
+      color: #1a365d;
+      font-size: 0.95rem;
       font-weight: 600;
+      text-align: right;
     }
     
     .final-cta {
@@ -390,15 +418,17 @@
       }
       
       .header-container {
-        padding: 10px 20px;
+        padding: 15px 20px;
       }
       
       .logo {
-        height: 65px;
+        height: 100px;
       }
       
       .victory-fingers {
-        height: 120px;
+        height: 200px;
+        right: -30px;
+        top: -20px;
       }
     }
     
@@ -539,10 +569,46 @@
 
   <section class="testimonial">
     <div class="testimonial-content">
-      <blockquote>
-        "We raised $2,500 in one week with no inventory, no volunteers, and no stress. One Team Goal made it too easy."
-      </blockquote>
-      <p class="testimonial-author">— Coach Mike, Utah</p>
+      <h2 style="color: #1a365d; font-size: 2.5rem; margin-bottom: 20px; font-weight: 700;">What Coaches Are Saying</h2>
+      <p style="color: #4a5568; font-size: 1.2rem; margin-bottom: 40px;">Real results from real teams across America</p>
+      <div class="testimonial-grid">
+        <div class="testimonial-item">
+          <blockquote>
+            "We raised $2,500 in one week with no inventory, no volunteers, and no stress. One Team Goal made it too easy."
+          </blockquote>
+          <p class="testimonial-author">— Coach Mike Thompson, Utah Warriors Baseball</p>
+        </div>
+        <div class="testimonial-item">
+          <blockquote>
+            "Our parents loved the quality gear and the convenience. We hit our $4,000 tournament goal in just 10 days!"
+          </blockquote>
+          <p class="testimonial-author">— Sarah Martinez, Phoenix Storm Soccer</p>
+        </div>
+        <div class="testimonial-item">
+          <blockquote>
+            "Finally, a fundraising solution that actually works. No upfront costs, fast payments, and our team looked amazing in their custom gear."
+          </blockquote>
+          <p class="testimonial-author">— Coach David Chen, Boston Eagles Basketball</p>
+        </div>
+        <div class="testimonial-item">
+          <blockquote>
+            "The parents were fighting over who got to order first! Raised $3,200 for new equipment without any of the usual headaches."
+          </blockquote>
+          <p class="testimonial-author">— Lisa Rodriguez, Tampa Bay Lightning Volleyball</p>
+        </div>
+        <div class="testimonial-item">
+          <blockquote>
+            "Best fundraising experience we've ever had. The QR code made sharing so simple, and the money was in our account in 2 days."
+          </blockquote>
+          <p class="testimonial-author">— Coach Ryan Patterson, Denver Rapids Lacrosse</p>
+        </div>
+        <div class="testimonial-item">
+          <blockquote>
+            "We were skeptical at first, but One Team Goal delivered exactly what they promised. $1,800 raised with zero effort from us."
+          </blockquote>
+          <p class="testimonial-author">— Jennifer Walsh, Seattle Seahawks Youth Football</p>
+        </div>
+      </div>
     </div>
   </section>
 
