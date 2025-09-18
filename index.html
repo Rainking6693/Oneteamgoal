@@ -446,6 +446,34 @@
       "email": "info@oneteamgoal.com",
       "availableLanguage": "English"
     },
+    "founder": {
+      "@type": "Person",
+      "name": "Jon",
+      "jobTitle": "Founder & Youth Sports Coach",
+      "description": "Graphic designer by trade and experienced youth sports coach who created One Team Goal to solve the fundraising challenges coaches face",
+      "image": "https://oneteamgoal.com/jonANDson.png",
+      "knowsAbout": [
+        "Youth Sports Coaching",
+        "Sports Team Management",
+        "Fundraising Strategy",
+        "Graphic Design",
+        "Custom Merchandise Design"
+      ],
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Youth Sports Coach",
+          "occupationLocation": "United States",
+          "skills": "Team Management, Youth Development, Sports Strategy"
+        },
+        {
+          "@type": "Occupation",
+          "name": "Graphic Designer",
+          "occupationLocation": "United States",
+          "skills": "Custom Design, Brand Development, Visual Communication"
+        }
+      ]
+    },
     "sameAs": [
       "https://facebook.com/oneteamgoal",
       "https://twitter.com/oneteamgoal",
@@ -471,6 +499,64 @@
       "Team Fundraising Strategies",
       "Sports Team Management",
       "Print-on-Demand Fulfillment"
+    ]
+  }
+  </script>
+  
+  <!-- Schema Markup for Founder/Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jon",
+    "jobTitle": "Founder & Youth Sports Coach at One Team Goal",
+    "description": "Experienced youth sports coach and graphic designer who created One Team Goal after years of frustration with traditional fundraising methods like car washes. Passionate about helping coaches focus on coaching while teams raise real money.",
+    "image": "https://oneteamgoal.com/jonANDson.png",
+    "url": "https://oneteamgoal.com",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "One Team Goal",
+      "url": "https://oneteamgoal.com"
+    },
+    "hasOccupation": [
+      {
+        "@type": "Occupation",
+        "name": "Youth Sports Coach",
+        "description": "Coaches football and various youth sports with focus on team development and positive experiences",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "skills": "Team Management, Youth Development, Sports Strategy, Parent Communication"
+      },
+      {
+        "@type": "Occupation",
+        "name": "Graphic Designer",
+        "description": "Professional graphic designer specializing in custom sports merchandise and team branding",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "skills": "Custom Design, Brand Development, Sports Merchandise, Visual Communication"
+      }
+    ],
+    "knowsAbout": [
+      "Youth Sports Coaching",
+      "Sports Team Fundraising",
+      "Custom Merchandise Design",
+      "Team Management",
+      "Parent Engagement",
+      "Sports Team Operations",
+      "Fundraising Strategy",
+      "Print-on-Demand Business"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Graphic Design Education"
+    },
+    "award": [
+      "Youth Sports Coach Recognition",
+      "Innovative Fundraising Solution Creator"
     ]
   }
   </script>
@@ -1354,6 +1440,262 @@
       font-size: 1.3rem;
       line-height: 1.6;
     }
+    
+    /* Created by a Coach Section Styles */
+    .coach-story-section {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+      padding: 100px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .coach-story-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20s-20-8.954-20-20 8.954-20 20-20 20 8.954 20 20zm-30 0c0 5.523 4.477 10 10 10s10-4.477 10-10-4.477-10-10-10-10 4.477-10 10z'/%3E%3C/g%3E%3C/svg%3E") repeat;
+    }
+    
+    .coach-story-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .coach-story-content {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 60px;
+      align-items: center;
+    }
+    
+    .coach-badge {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      margin-bottom: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(185, 28, 28, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .coach-badge::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      animation: shine 3s infinite;
+    }
+    
+    .badge-text {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+    
+    .badge-subtext {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-top: 2px;
+    }
+    
+    .coach-story-text h2 {
+      color: #1a365d;
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 25px;
+    }
+    
+    .coach-intro {
+      font-size: 1.3rem;
+      color: #2d3748;
+      font-weight: 600;
+      margin-bottom: 30px;
+      padding: 20px;
+      background: rgba(26, 54, 93, 0.05);
+      border-left: 4px solid #dc2626;
+      border-radius: 8px;
+    }
+    
+    .coach-story p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #4a5568;
+      margin-bottom: 20px;
+    }
+    
+    .highlight-text {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      padding: 20px;
+      border-radius: 12px;
+      border-left: 4px solid #f59e0b;
+      font-weight: 600;
+      color: #92400e !important;
+      margin: 25px 0 !important;
+    }
+    
+    .coach-philosophy {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      margin: 30px 0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      border-top: 4px solid #dc2626;
+    }
+    
+    .coach-philosophy h3 {
+      color: #1a365d;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    
+    .philosophy-quote {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #2d3748;
+      line-height: 1.6;
+    }
+    
+    .coach-motto {
+      text-align: center;
+      font-size: 1.4rem;
+      color: #dc2626;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin: 30px 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+      border-radius: 12px;
+      text-transform: uppercase;
+    }
+    
+    .trust-indicators {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      padding: 12px 18px;
+      border-radius: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-weight: 600;
+      color: #1a365d;
+      font-size: 0.95rem;
+    }
+    
+    .trust-icon {
+      font-size: 1.2rem;
+    }
+    
+    .coach-story-image {
+      text-align: center;
+      position: relative;
+    }
+    
+    .coach-photo {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+    
+    .coach-photo:hover {
+      transform: scale(1.02);
+    }
+    
+    .photo-caption {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #1a365d;
+    }
+    
+    .caption-subtitle {
+      color: #4a5568;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    
+    .credibility-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      margin-top: 15px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+    }
+    
+    .badge-icon {
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+    
+    /* Mobile Responsive for Coach Section */
+    @media (max-width: 1024px) {
+      .coach-story-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      
+      .coach-story-text {
+        order: 2;
+      }
+      
+      .coach-story-image {
+        order: 1;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .coach-story-section {
+        padding: 60px 20px;
+      }
+      
+      .coach-story-text h2 {
+        font-size: 2.2rem;
+      }
+      
+      .coach-intro {
+        font-size: 1.1rem;
+      }
+      
+      .trust-indicators {
+        justify-content: center;
+      }
+      
+      .coach-motto {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1375,6 +1717,7 @@
         <a href="vs-car-wash-fundraising.html">vs Car Wash</a>
         <a href="fundraising-guide.html">Guide</a>
         <a href="youth-sports-costs.html">Costs</a>
+        <a href="blog/">Blog</a>
         <a href="#faq">FAQ</a>
       </nav>
       <img src="Fingers1.png" alt="Victory Fingers - Successful Youth Sports Fundraising" class="victory-fingers">
@@ -1584,6 +1927,73 @@
       <!-- CTA in testimonial section -->
       <div class="cta-buttons">
         <a href="final_signup_form_page.html" class="cta-button cta-primary">Join These Successful Teams</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Created by a Coach Section -->
+  <section class="coach-story-section">
+    <div class="coach-story-container">
+      <div class="coach-story-content">
+        <div class="coach-story-text">
+          <div class="coach-badge">
+            <span class="badge-text">CREATED BY A COACH</span>
+            <span class="badge-subtext">FOR COACHES</span>
+          </div>
+          <h2>"I Was Tired of Spending More Time Fundraising Than Coaching"</h2>
+          <p class="coach-intro">Hi, I'm Jon - a graphic designer, father, and youth sports coach who got fed up with the fundraising struggle.</p>
+          
+          <div class="coach-story">
+            <p><strong>Coaching has been one of the most rewarding experiences of my life</strong> as a father and member of a community, but it's also been challenging in many ways. It takes a lot of research, organizing, and patience.</p>
+            
+            <p>After years of coaching football and other sports, I realized <strong>I was spending more time organizing car washes and coordinating volunteers than actually coaching kids.</strong> The most frustrating part? We'd work for weeks and barely raise enough to cover basic expenses.</p>
+            
+            
+            <p>As a graphic designer, I knew there had to be a better way. <strong>Parents wanted to support their kids, but they didn't want another weekend commitment</strong> or door-to-door sales obligation.</p>
+            
+            <p class="highlight-text">That's when I created One Team Goal - my solution to finding a way to raise money and create something that would rally our fans and supporters behind one important cause: <strong>giving our kids a rewarding, fun, and successful experience with our team.</strong></p>
+            
+            <p>The most rewarding aspect of team sports is the collaborative effort of each player, parent, team manager, and coach, all working together to have a successful season. <strong>I love watching a team meet its goal together with one collective effort.</strong></p>
+            
+            <p>It's definitely that way when it comes to fundraising too. Something that I never enjoyed doing as a coach until now.</p>
+          </div>
+          
+          <div class="coach-philosophy">
+            <h3>My Philosophy: Keep It Simple</h3>
+            <p class="philosophy-quote">"One Team Goal was created by a coach, for coaches who want to spend time coaching - not fundraising. <strong>Let's keep it simple</strong> and focus on what matters most!"</p>
+          </div>
+          
+          <div class="coach-motto">
+            <strong>ONE TEAM • ONE GOAL • ONE REWARD!</strong>
+          </div>
+          
+          <div class="trust-indicators">
+            <div class="trust-item">
+              <span class="trust-icon">🏈</span>
+              <span>Active Youth Coach</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">🎨</span>
+              <span>Professional Designer</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">👨‍👦</span>
+              <span>Sports Parent</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coach-story-image">
+          <img src="jonANDson.png" alt="Jon and his son - One Team Goal founder and youth sports coach" class="coach-photo">
+          <div class="photo-caption">
+            <strong>Jon & His Son</strong><br>
+            <span class="caption-subtitle">Founder & Coach</span>
+          </div>
+          <div class="credibility-badge">
+            <span class="badge-icon">✓</span>
+            <span class="badge-text">Real Coach, Real Solutions</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
