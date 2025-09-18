@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://oneteamgoal.com/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://oneteamgoal.com/ALogo.jpg</image:loc>
+      <image:title>One Team Goal - Youth Sports Fundraising Platform Logo</image:title>
+      <image:caption>One Team Goal logo for youth sports fundraising platform</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oneteamgoal.com/Homepage.jpg</image:loc>
+      <image:title>Youth Sports Fundraising Platform Homepage</image:title>
+      <image:caption>One Team Goal homepage showcasing fundraising solutions for youth sports teams</image:caption>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://oneteamgoal.com/Homepage.jpg</video:thumbnail_loc>
+      <video:title>How Teams Raise $3,000+ in 3 Weeks with One Team Goal</video:title>
+      <video:description>Watch real coaches explain how they ditched the car wash stress and raised thousands through custom team merchandise sales</video:description>
+      <video:content_loc>https://oneteamgoal.com/One team goal walk through video Subtitles.mp4</video:content_loc>
+      <video:duration>225</video:duration>
+      <video:publication_date>2024-01-15</video:publication_date>
+    </video:video>
+  </url>
+  
+  <!-- Baseball Fundraising Page -->
+  <url>
+    <loc>https://oneteamgoal.com/baseball-fundraising.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Soccer Fundraising Page -->
+  <url>
+    <loc>https://oneteamgoal.com/soccer-fundraising.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Basketball Fundraising Page -->
+  <url>
+    <loc>https://oneteamgoal.com/basketball-fundraising.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Car Wash Comparison Page -->
+  <url>
+    <loc>https://oneteamgoal.com/vs-car-wash-fundraising.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Signup Form -->
+  <url>
+    <loc>https://oneteamgoal.com/final_signup_form_page.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Product Images -->
+  <url>
+    <loc>https://oneteamgoal.com/Alpha%20Predator%20Hat.png</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://oneteamgoal.com/Alpha%20Predator%20Hat.png</image:loc>
+      <image:title>Custom Youth Sports Team Hat - Alpha Predator Design</image:title>
+      <image:caption>Custom baseball hat with Alpha Predator design for youth sports fundraising</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://oneteamgoal.com/Alpha%20Predator%20Shirt.png</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://oneteamgoal.com/Alpha%20Predator%20Shirt.png</image:loc>
+      <image:title>Custom Youth Sports Team Shirt - Alpha Predator Design</image:title>
+      <image:caption>Custom sports shirt with Alpha Predator design for youth team fundraising</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://oneteamgoal.com/Alpha%20Predator%20Hoodie.png</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://oneteamgoal.com/Alpha%20Predator%20Hoodie.png</image:loc>
+      <image:title>Custom Youth Sports Team Hoodie - Alpha Predator Design</image:title>
+      <image:caption>Custom sports hoodie with Alpha Predator design for youth team fundraising</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://oneteamgoal.com/Grizzly%20Claw%20Collection.png</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://oneteamgoal.com/Grizzly%20Claw%20Collection.png</image:loc>
+      <image:title>Custom Youth Sports Team Merchandise - Grizzly Claw Collection</image:title>
+      <image:caption>Custom sports merchandise collection with Grizzly Claw design for youth team fundraising</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
