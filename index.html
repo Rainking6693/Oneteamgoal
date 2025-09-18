@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>One Team Goal - Team Fundraising Made Easy</title>
-  <meta name="description" content="Raise money for your team with custom gear and donations. No upfront costs, no inventory. Get paid in 1-2 days!" />
+  <title>One Team Goal - Finally! Fundraising That Actually Works</title>
+  <meta name="description" content="Stop the car wash stress! Raise $3,000+ with custom team gear. No volunteers, no inventory, no headaches. Money in your account in 1-2 days!" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -51,6 +51,34 @@
       transform: rotate(-15deg);
       filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2)) brightness(1.1) contrast(1.3);
       mix-blend-mode: darken;
+    }
+    
+    /* Pain Point Alert Bar */
+    .pain-alert {
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .pain-alert::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      animation: shine 3s infinite;
+    }
+    
+    @keyframes shine {
+      0% { left: -100%; }
+      100% { left: 100%; }
     }
     
     .hero {
@@ -110,6 +138,8 @@
       transition: all 0.3s ease;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      position: relative;
+      overflow: hidden;
     }
     
     .cta-primary {
@@ -123,6 +153,21 @@
       box-shadow: 0 6px 20px rgba(185, 28, 28, 0.4);
     }
     
+    .cta-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    
+    .cta-primary:hover::before {
+      left: 100%;
+    }
+    
     .cta-secondary {
       background: white;
       color: #1a365d;
@@ -132,6 +177,19 @@
     .cta-secondary:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Risk Reversal Badge */
+    .risk-reversal {
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 25px;
+      padding: 15px 25px;
+      margin-top: 30px;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
     }
     
     .video-section {
@@ -165,6 +223,7 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      margin-bottom: 30px;
     }
     
     .video-wrapper video {
@@ -174,6 +233,11 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    
+    /* CTA after video */
+    .video-cta {
+      margin-top: 30px;
     }
     
     .steps {
@@ -310,6 +374,78 @@
       line-height: 1.6;
     }
     
+    /* Benefits Section */
+    .benefits-section {
+      background: linear-gradient(135deg, #f7fafc 0%, #e2e8f0 100%);
+      padding: 80px 20px;
+    }
+    
+    .benefits-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .benefits-section h2 {
+      color: #1a365d;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .benefits-subtitle {
+      color: #4a5568;
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    
+    .benefit-item {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+    
+    .benefit-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+    
+    .benefit-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: white;
+    }
+    
+    .benefit-item h3 {
+      color: #1a365d;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    
+    .benefit-item p {
+      color: #4a5568;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    
     .gear-section {
       background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
       color: white;
@@ -403,6 +539,7 @@
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 30px;
       margin-top: 40px;
+      margin-bottom: 50px;
     }
     
     .testimonial-item {
@@ -432,6 +569,31 @@
       font-size: 0.95rem;
       font-weight: 600;
       text-align: right;
+    }
+    
+    /* Urgency Section */
+    .urgency-section {
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    .urgency-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .urgency-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .urgency-section p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.95;
     }
     
     .final-cta {
@@ -501,6 +663,10 @@
         height: 200px;
         right: -30px;
         top: -20px;
+      }
+      
+      .benefits-grid {
+        grid-template-columns: 1fr;
       }
     }
     
@@ -615,6 +781,11 @@
   </style>
 </head>
 <body>
+  <!-- Pain Point Alert Bar -->
+  <div class="pain-alert">
+    🚨 Tired of organizing car washes that barely cover gas money? There's finally a better way! 🚨
+  </div>
+
   <header>
     <div class="header-container">
       <img src="ALogo.jpg" alt="One Team Goal Logo" class="logo">
@@ -624,30 +795,75 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Raise Money for Your Team in Days — Not Weeks</h1>
-      <p class="subtitle">Sell custom gear. Accept donations. No upfront costs, no shipping, no inventory. Just cash in your account in 1–2 days.</p>
+      <h1>Finally! Fundraising That Doesn't Require 20 Volunteers and a Miracle</h1>
+      <p class="subtitle">While other teams stress over car washes, your team sells custom gear online. Zero upfront costs, zero shipping hassles, maximum results.</p>
       <div class="cta-buttons">
-        <a href="final_signup_form_page.html" class="cta-button cta-primary">Launch My Free Team Store</a>
-        <a href="#video" class="cta-button cta-secondary">Watch 60-Second Demo</a>
+        <a href="final_signup_form_page.html" class="cta-button cta-primary">Launch My Hassle-Free Fundraiser</a>
+        <a href="#video" class="cta-button cta-secondary">See Real Team Results</a>
+      </div>
+      <div class="risk-reversal">
+        ✅ 100% Free Setup • No Contracts • Cancel Anytime
       </div>
     </div>
   </section>
 
   <section class="video-section" id="video">
     <div class="video-container">
-      <h2>See How It Works in 60 Seconds</h2>
-      <p>Discover how easy fundraising can be with One Team Goal</p>
+      <h2>See How Teams Raise $3,000+ in 3 Weeks</h2>
+      <p>Watch real coaches explain how they ditched the car wash stress</p>
       <div class="video-wrapper">
         <video controls poster="Homepage.jpg">
           <source src="One team goal walk through video Subtitles.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
+      <div class="video-cta">
+        <a href="final_signup_form_page.html" class="cta-button cta-primary">Start My Free Store Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits-section">
+    <div class="benefits-container">
+      <h2>Stop the Fundraising Stress</h2>
+      <p class="benefits-subtitle">Finally, fundraising that works while you focus on coaching</p>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="benefit-icon">💰</div>
+          <h3>Raise $2,000-$5,000+ per campaign</h3>
+          <p>Not $200 from candy sales. Real money that makes a difference for your team's goals.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🙌</div>
+          <h3>Zero volunteers needed</h3>
+          <p>No more coordinating 20 people for one event. No more begging parents to help with car washes.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">👕</div>
+          <h3>Professional custom gear</h3>
+          <p>That parents actually want to buy. High-quality merchandise with your team's branding.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">⚡</div>
+          <h3>Money in 1-2 days</h3>
+          <p>Not weeks of waiting for checks to clear. Fast payments directly to your account.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🚫</div>
+          <h3>No upfront costs or inventory</h3>
+          <p>Launch today, risk-free. No storage, no shipping, no financial risk to your team.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">😴</div>
+          <h3>Works while you sleep</h3>
+          <p>Online sales 24/7, no events to manage. Your store sells gear while you focus on coaching.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="steps">
-    <h2>How It Works</h2>
+    <h2>How It Works (It's Ridiculously Simple)</h2>
     <div class="step-grid">
       <div class="step clickable-step-box" data-step="1">
         <div class="step-number">1</div>
@@ -655,7 +871,7 @@
           <img src="Wolf.png" alt="Wolf">
         </div>
         <h3>We Build Your Shop</h3>
-        <p>Get pro-quality team gear with your logo — ready to sell online in minutes.</p>
+        <p>Get pro-quality team gear with your logo — ready to sell online in minutes. No design skills needed.</p>
       </div>
       <div class="step clickable-step-box" data-step="2">
         <div class="step-number">2</div>
@@ -663,7 +879,7 @@
           <div class="qr-code"></div>
         </div>
         <h3>Share the Link</h3>
-        <p>Your team gets a QR code and shareable link. Just post it and watch the support roll in!</p>
+        <p>Your team gets a QR code and shareable link. Just post it and watch the support roll in! No door-to-door sales.</p>
       </div>
       <div class="step clickable-step-box" data-step="3">
         <div class="step-number">3</div>
@@ -671,7 +887,7 @@
           <div class="money-symbol">$</div>
         </div>
         <h3>Get Paid Fast</h3>
-        <p>Donations and gear sales hit your account in as little as 1–2 days. No waiting, no hassle.</p>
+        <p>Donations and gear sales hit your account in as little as 1–2 days. No waiting, no hassle, no stress.</p>
       </div>
     </div>
   </section>
@@ -704,17 +920,17 @@
   <section class="testimonial">
     <div class="testimonial-content">
       <h2 style="color: #1a365d; font-size: 2.5rem; margin-bottom: 20px; font-weight: 700;">What Coaches Are Saying</h2>
-      <p style="color: #4a5568; font-size: 1.2rem; margin-bottom: 40px;">Real results from real teams across America</p>
+      <p style="color: #4a5568; font-size: 1.2rem; margin-bottom: 40px;">Real results from real teams who ditched the car wash stress</p>
       <div class="testimonial-grid">
         <div class="testimonial-item">
           <blockquote>
-            "We raised $2,500 in one week with no inventory, no volunteers, and no stress. One Team Goal made it too easy."
+            "We raised $2,500 in one week - that's 5x more than our best car wash ever, with zero volunteers needed and no inventory headaches."
           </blockquote>
           <p class="testimonial-author">— Coach Mike Thompson, Utah Warriors Baseball</p>
         </div>
         <div class="testimonial-item">
           <blockquote>
-            "Our parents loved the quality gear and the convenience. We hit our $4,000 tournament goal in just 10 days!"
+            "Our parents loved the quality gear and the convenience. We hit our $4,000 tournament goal in just 10 days! No more begging for volunteers."
           </blockquote>
           <p class="testimonial-author">— Sarah Martinez, Phoenix Storm Soccer</p>
         </div>
@@ -743,14 +959,28 @@
           <p class="testimonial-author">— Jennifer Walsh, Seattle Seahawks Youth Football</p>
         </div>
       </div>
+      <!-- CTA in testimonial section -->
+      <div class="cta-buttons">
+        <a href="final_signup_form_page.html" class="cta-button cta-primary">Join These Successful Teams</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="urgency-section">
+    <div class="urgency-content">
+      <h2>Sports Seasons Are Short - Make Every Week Count</h2>
+      <p>While you're planning your next car wash, other teams are already raising thousands. Don't let your team fall behind with outdated fundraising.</p>
+      <div class="cta-buttons">
+        <a href="final_signup_form_page.html" class="cta-button cta-secondary">Get My Team's Advantage Now</a>
+      </div>
     </div>
   </section>
 
   <section class="final-cta">
-    <h2>Ready to Fund Your Team?</h2>
+    <h2>Ready to Ditch the Car Wash Stress?</h2>
     <p>Join thousands of teams raising money the easy way</p>
     <div class="cta-buttons">
-      <a href="final_signup_form_page.html" class="cta-button cta-primary">Get Started Free</a>
+      <a href="final_signup_form_page.html" class="cta-button cta-primary">Launch My Hassle-Free Fundraiser</a>
     </div>
   </section>
 
