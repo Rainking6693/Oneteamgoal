@@ -133,18 +133,25 @@
     
     header {
       background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
-      padding: 20px 0;
+      padding: 30px 40px;
       color: white;
+      position: relative;
+      overflow: hidden;
+      min-height: 120px;
     }
     
     .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
+      z-index: 2;
     }
     
     .logo {
-      height: 60px;
+      height: 140px;
       object-fit: contain;
     }
     
@@ -353,6 +360,10 @@
         font-size: 0.9rem;
       }
       
+      header {
+        padding: 15px 20px;
+      }
+      
       .header-content {
         flex-direction: column;
         gap: 20px;
@@ -370,28 +381,26 @@
       }
       
       .logo {
-        height: 50px;
+        height: 100px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="header-content">
-        <img src="ALogo.jpg" alt="One Team Goal - Youth Sports Fundraising Platform Logo" class="logo" style="height: 60px; object-fit: contain;">
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="#benefits">Benefits</a>
-          <a href="baseball-fundraising.html">Baseball</a>
-          <a href="soccer-fundraising.html">Soccer</a>
-          <a href="basketball-fundraising.html">Basketball</a>
-          <a href="vs-car-wash-fundraising.html">vs Car Wash</a>
-          <a href="fundraising-guide.html">Guide</a>
-          <a href="blog/">Blog</a>
-          <a href="#faq">FAQ</a>
-        </nav>
-      </div>
+    <div class="header-content">
+      <img src="ALogo.jpg" alt="One Team Goal - Youth Sports Fundraising Platform Logo" class="logo">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#benefits">Benefits</a>
+        <a href="baseball-fundraising.html">Baseball</a>
+        <a href="soccer-fundraising.html">Soccer</a>
+        <a href="basketball-fundraising.html">Basketball</a>
+        <a href="vs-car-wash-fundraising.html">vs Car Wash</a>
+        <a href="fundraising-guide.html">Guide</a>
+        <a href="blog/">Blog</a>
+        <a href="#faq">FAQ</a>
+      </nav>
     </div>
   </header>
 
