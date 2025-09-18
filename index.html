@@ -393,7 +393,6 @@
   <style>
     /* Critical CSS for immediate rendering */
     body{font-family:'Montserrat',sans-serif;margin:0;padding:0;background:#fff;color:#1a365d}
-    .pain-alert{background:linear-gradient(135deg,#dc2626 0%,#b91c1c 100%);color:#fff;padding:15px 20px;text-align:center;font-weight:600;font-size:1.1rem}
     header{background:linear-gradient(135deg,#1a365d 0%,#2c5282 100%);padding:30px 40px;min-height:120px}
     .hero{background:linear-gradient(135deg,#1a365d 0%,#2c5282 50%,#b91c1c 100%);color:#fff;padding:80px 20px;text-align:center}
     .hero h1{font-size:3.2rem;font-weight:800;margin-bottom:25px;line-height:1.1}
@@ -648,33 +647,7 @@
       mix-blend-mode: darken;
     }
     
-    /* Pain Point Alert Bar */
-    .pain-alert {
-      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-      color: white;
-      padding: 15px 20px;
-      text-align: center;
-      font-weight: 600;
-      font-size: 1.1rem;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .pain-alert::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      animation: shine 3s infinite;
-    }
-    
-    @keyframes shine {
-      0% { left: -100%; }
-      100% { left: 100%; }
-    }
+
     
     .hero {
       background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #b91c1c 100%);
@@ -1701,10 +1674,7 @@
 <body>
   <!-- Skip Navigation for Accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <!-- Pain Point Alert Bar -->
-  <div class="pain-alert">
-    🚨 Tired of organizing car washes that barely cover gas money? There's finally a better way! 🚨
-  </div>
+
 
   <header>
     <div class="header-container">
